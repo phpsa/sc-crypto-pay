@@ -1,0 +1,55 @@
+{
+    "name": "phpsa/sc-crypto-pay",
+    "description": "A Crypto Pay Payment module for Statamic's Simple commerce",
+    "license": "MIT",
+    "keywords": [
+        "statamic",
+        "simple-commerce",
+        "payment",
+        "addon",
+        "cryptopay"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Craig Smith",
+            "email": "vxdhost@gmail.com"
+        }
+    ],
+    "require": {
+        "statamic/cms": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0",
+        "phpunit/phpunit": "^8.4|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phpsa\\ScCryptoPay\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phpsa\\ScCryptoPay\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "phpunit": "phpunit"
+    },
+    "extra": {
+        "statamic": {
+            "name": "Simple Cart Crypto Pay Addon",
+            "description": "A Crypto Pay module for Statamic's Simple commerce"
+        },
+        "laravel": {
+            "providers": [
+                "Phpsa\\ScCryptoPay\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
